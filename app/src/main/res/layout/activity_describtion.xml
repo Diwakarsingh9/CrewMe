@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.apporio6.crewme.DescribtionActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/headerheight"
+        android:background="@color/backgroundcolor"
+        android:gravity="left|center"
+        android:layout_marginBottom="1dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center"
+            android:id="@+id/llforbck"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:id="@+id/imageView8"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:id="@+id/textView5"
+                android:textSize="16dp"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center">
+           <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/descr"
+               android:textCursorDrawable="@drawable/color_cursor"
+               android:background="@null"
+
+            android:maxLength="500"
+               android:textSize="@dimen/textfillsize"
+               android:textColor="#000000"
+               android:textColorHint="#bbbbbb"
+            android:hint="Describe Yourself ...."
+            android:gravity="top|left"
+            android:padding="10dp" />
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="500 characters left"
+            android:id="@+id/shw"
+            android:textColor="@color/backgroundcolor"
+            android:textSize="18dp"
+            android:padding="10dp"
+            android:gravity="center|right"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="bottom|center" />
+    </LinearLayout>
+
+</LinearLayout>

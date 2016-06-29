@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/llforerror"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/imageView6"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/erroricon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CrewMe can&apos;t reach the server right now. Please try again later."
+                android:id="@+id/textView"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="40dp"
+                android:textColor="@android:color/white"
+                android:textStyle="normal"
+                android:textSize="25dp"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="45dp"
+                android:id="@+id/searchagain"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/imageselsearchagain"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitXY" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/llforprogress"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:id="@+id/bgimg"
+                    android:src="@drawable/rasbg"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="visible" />
+                <FrameLayout
+                    android:id="@+id/switcher"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:padding="20dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:scaleType="fitCenter"
+                        android:id="@+id/imgh"
+                        android:repeatMode="reverse"
+                        android:src="@drawable/dot" />
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:scaleType="fitCenter"
+                        android:id="@+id/imgh3"
+                        android:repeatMode="reverse"
+                        android:src="@drawable/dot"
+                        android:layout_gravity="center|right" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="bottom|center"
+                        android:src="@drawable/dot"
+                        android:id="@+id/imh2" />
+                </FrameLayout>
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:id="@+id/pbimage"
+                    android:src="@drawable/ras"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Searching ...."
+                android:id="@+id/txt"
+                android:textColor="@android:color/white"
+                android:textStyle="normal"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_margin="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:id="@+id/llforcards"
+            android:gravity="center">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Others"
+                        android:id="@+id/companyname"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_margin="20dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Person's Name"
+                        android:id="@+id/name"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        android:textSize="22dp"
+                        android:gravity="center"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
+
+                <com.example.apporio6.crewme.flingswipe.SwipeFlingAdapterView
+                    android:id="@+id/frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".MainActivity"
+                    app:rotation_degrees="16"
+                    app:max_visible="2"
+                    app:min_adapter_stack="6"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:id="@+id/imageView7"
+                            android:src="@drawable/gprs"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3.7 miles"
+                            android:id="@+id/textView2"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp"
+                            android:layout_margin="5dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:id="@+id/imageView71"
+                            android:src="@drawable/clock"
+                            android:layout_margin="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9 months ago"
+                            android:id="@+id/textView21"
+                            android:textColor="#ffffff"
+                            android:textSize="15dp"
+                            android:layout_margin="5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/left"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/imgselctrexit"
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="10dp" />
+
+                <ImageView
+                    android:id="@+id/right"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/imgselctrboarding"
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:background="#EFEFF4">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView13"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/tkoff"
+            android:scaleType="fitCenter"
+            android:layout_gravity="left|center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/src"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:hint="Source"
+            android:textColorHint="#bbbbbb"
+            android:textColor="@color/backgroundcolor"
+            android:textSize="14dp" />
+    </FrameLayout>
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:background="#EFEFF4"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView13ff"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/landing"
+            android:scaleType="fitCenter"
+            android:layout_gravity="left|center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dest"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:hint="Destination"
+            android:textColorHint="#bbbbbb"
+            android:textColor="@color/backgroundcolor"
+            android:textSize="14dp" />
+    </FrameLayout>
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:background="#EFEFF4"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/llfordatetime">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView13gg"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/datetime"
+            android:scaleType="fitCenter"
+            android:layout_gravity="left|center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/date"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:hint="Date and Time"
+            android:textColorHint="#bbbbbb"
+            android:textColor="@color/backgroundcolor"
+            android:textSize="14dp" />
+    </FrameLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_gravity="center_horizontal"
+        android:divider="#b6bbbbbb"
+        android:dividerHeight="0.5dp" />
+</LinearLayout>
